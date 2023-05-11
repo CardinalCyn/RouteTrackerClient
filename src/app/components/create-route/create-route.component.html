@@ -1,0 +1,27 @@
+<div id="createRouteContainer">
+    <div *ngIf="showForm===false" class="mt-4 text-center">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="displayForm()">Create Route</button>
+    </div>
+    <div id="formContainer" *ngIf="showForm===true" class="text-center">
+      <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" (click)="hideForm()">Close form</button>
+      <form class="mt-4" (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2 text-center" for="routeName">Route Name:</label>
+          <input class="shadow appearance-none border rounded py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="routeName" type="text" name="routeName" [(ngModel)]="routeName" />
+        </div>
+        <app-map (setRouteTo)="setRouteTo($event)" (setRouteFrom)="setRouteFrom($event)"></app-map>
+        <h2 class="font-bold text-gray-700 mb-2 text-center">Desired Route Time:</h2>
+        <div class="flex mb-4 text-center justify-center">
+          <div class="mr-4">
+            <label class="block text-gray-700 font-bold mb-2 text-center" for="routeTimeHours">Hours:</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="routeTimeHours" type="number" name="routeTimeHours" [(ngModel)]="routeTimeHours" />
+          </div>
+          <div>
+            <label class="block text-gray-700 font-bold mb-2" for="routeTimeMinutes text-center">Minutes:</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="routeTimeMinutes" type="number" name="routeTimeMinutes" [(ngModel)]="routeTimeMinutes" />
+          </div>
+        </div>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Submit</button>
+      </form>
+    </div>
+</div>

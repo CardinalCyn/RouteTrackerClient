@@ -1,0 +1,23 @@
+<div class="mt-4">
+    <button type="button" (click)="toggleSidebarVisibility()" style="position: fixed;top: 25px; right: 30px;"><fa-icon [icon]="faBars" size="2x" class="text-white mr-5"></fa-icon></button>
+    <ul *ngIf="showSidebar" style="background-color: #393E46;">
+        <li class="relative ml-12 mt-16 text-white">
+            <a href="/" id ="navbarElement" class="">Home</a>
+        </li>
+        <li class="relative ml-12 text-white">
+            <button id ="navbarElement" *ngIf="!loggedIn" class="" (click)="logInDemo()">Demo Account</button>
+        </li>
+        <li class="relative ml-12 text-white">
+            <button id ="navbarElement" *ngIf="!loggedIn" class="" style=""><a href="/login">Login</a></button>
+        </li>
+        <li class="relative ml-12 text-white">
+            <button id ="navbarElement" *ngIf="!loggedIn" class=""><a href="/register">Register</a></button>
+        </li>
+        <li class="relative ml-12 text-white">
+            <button id ="navbarElement" *ngIf="loggedIn" class=""><a href="/main">Main</a></button>
+        </li>
+        <li class="relative ml-12 text-white">
+            <button id ="navbarElement" *ngIf="loggedIn" class=""><a (click)="logOut()">Log out</a></button>
+        </li>
+    </ul>
+</div>

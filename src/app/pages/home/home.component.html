@@ -1,0 +1,28 @@
+<div id="homeContainer" class="flex flex-col min-h-screen" style="background-color:  #F2DEBA;">
+  <app-navbar [loggedIn]="loggedIn"></app-navbar>
+  <section class="w-screen" style="margin-top: 50px;">
+    <div class="flex flex-col items-center justify-center h-screen">
+      <fa-icon [icon]="faRoute" size="10x"></fa-icon>
+      <h3 class="text-3xl font-semibold mt-10">Route creation</h3>
+      <span class="">Create routes with a few clicks</span>
+      <span class="">Get directions for your route</span>
+    </div>
+    <div class="flex flex-col items-center justify-center h-screen" style="background-color: #111B21; color: #25D366;">
+      <div class="flex">
+        <img class="mr-72" *ngIf="getScreenWidth>768" src="assets/images/lock.png" alt="Security lock">
+        <div class="flex flex-col justify-center items-center">
+          <fa-icon [icon]="faLock" size="10x"></fa-icon>
+          <h3 class="text-3xl font-semibold mt-10">Authentication</h3>
+          <span class="">Sign up and log in securely</span>
+          <span class="">Save your routes to your account</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center h-screen" style="background-color:#8ab4f8;">
+        <fa-icon [icon]="faClock" size="10x"></fa-icon>
+        <h3 class="text-3xl font-semibold mt-10">Commute</h3>
+        <span class="">Accurate travel times</span>
+        <span class="text-center">Get notified when your commute is short</span>
+    </div>
+  </section>
+</div>

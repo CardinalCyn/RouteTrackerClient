@@ -1,0 +1,4 @@
+<div id="loginContainer">
+    <app-navbar [loggedIn]="loggedIn"></app-navbar>
+    <app-login-register-form [submitButtonText]="'Login!'" (onFormSubmit)="submitLogin($event)" [errorMessage]="errorMessage"></app-login-register-form>
+</div>

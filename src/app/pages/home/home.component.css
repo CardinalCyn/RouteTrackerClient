@@ -1,0 +1,23 @@
+@media (max-width: 770px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .mobile-only {
+        margin-top:20px;
+        width:70%;
+    }
+    h3 {
+        margin-top: 20px;
+        font-size: 50px;
+    }
+    span {
+        margin-top: 20px;
+        font-size: 22px;
+        font-weight:bold;
+    }
+}
+  @media (min-width: 771px) {
+    .mobile-only {
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+<nav class="w-full mb-10" style="position:fixed;top:0;left:0;width:100%;z-index:100;background-color: #393E46;">
+    <div class="pt-6 pb-6 pl-5 flex">
+      <h1 class="text-white font-semibold text-2xl ml-5">Route Tracker</h1>
+      <app-sidebar *ngIf="(getScreenWidth <= 768)" [loggedIn]="loggedIn"></app-sidebar>
+      <ul *ngIf="(getScreenWidth > 768)" class="flex ml-auto">
+        <li class="relative">
+          <a href="/" id ="navbarElement" class="block px-6 py-4 text-sm font-semibold text-white hover:bg-blue-600 hover:text-white">Home</a>
+        </li>
+        <li class="relative">
+          <button id ="navbarElement" *ngIf="!loggedIn" class="block px-6 py-4 text-sm font-semibold text-white hover:bg-blue-600 hover:text-white" (click)="logInDemo()">Demo Account</button>
+        </li>
+        <li class="relative">
+          <a *ngIf="!loggedIn" href="/login" id="navbarElement" class="block px-6 py-4 text-sm font-semibold text-white hover:text-white">Login</a>
+        </li>
+        <li>
+          <a *ngIf="!loggedIn" href="/register" id="navbarElement" class="block px-6 py-4 text-sm font-semibold text-white hover:text-white">Register</a>
+        </li>
+        <li class="relative">
+          <a *ngIf="loggedIn" href="/main" id="navbarElement" class="block px-6 py-4 text-sm font-semibold text-white hover:text-white">Main</a>
+        </li>
+        <li class="relative">
+          <button id ="navbarElement" *ngIf="loggedIn" class="block px-6 py-4 text-sm font-semibold text-white hover:bg-blue-600 hover:text-white" (click)="logOut()">Log Out</button>
+        </li>
+      </ul>
+    </div>
+  </nav>

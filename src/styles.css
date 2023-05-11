@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  #usernameContainer {
+    margin-top: 100px; /* add margin to create space */
+  }
+
+  #loginRegisterContainer {
+    margin-top: 200px;
+  }

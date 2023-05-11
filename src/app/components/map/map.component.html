@@ -1,0 +1,17 @@
+<div id="map">
+    <div id='form-control'>
+        <label for="#fromMapSearchField" class="from-map-search-label">From:</label>
+        <input #fromMapSearchField class="from-map-search-field" type="text" />
+    </div>
+    <div id="form-control">
+        <label for="#toMapSearchField" class="to-map-search-label">To:</label>
+        <input #toMapSearchField class="to-map-search-field" type="text" />
+    </div>
+    <google-map
+        #GoogleMap
+        width="100%"
+        [center]="initialCoordinates"
+        [options]="mapConfigurations"
+    >
+    </google-map>
+</div>
