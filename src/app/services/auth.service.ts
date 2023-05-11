@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient,HttpHeaders} from '@angular/common/http'
+import { environment } from 'src/environments/environment';
 //required httpheaders for cors and cookie setting/ server checking cookies
 const HttpOptions={
   headers:new HttpHeaders({
@@ -10,7 +11,7 @@ const HttpOptions={
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl="https://127.0.0.1:5000/";
+  private apiUrl=environment.apiUrl;
   
   constructor(private http:HttpClient) { }
   //request to login
