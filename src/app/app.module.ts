@@ -23,8 +23,9 @@ import { MapComponent } from './components/map/map.component';
 import { SecondsToTimePipe } from './pipes/time';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { environment } from 'src/environments/environment';
 
-const config: SocketIoConfig={url:"https://127.0.0.1:5000",options:{}};
+const config: SocketIoConfig={url:environment.apiUrl,options:{}};
 const appRoutes:Routes=[
   {
     path:"",component:HomeComponent
