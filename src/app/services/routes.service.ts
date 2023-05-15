@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 const HttpOptions={
   headers:new HttpHeaders({
     'Content-Type':'application/json',
@@ -9,7 +10,7 @@ const HttpOptions={
   providedIn: 'root'
 })
 export class RoutesService {
-  private apiUrl="https://127.0.0.1:5000/";
+  private apiUrl=environment.apiUrl;
   
   constructor(private http:HttpClient) { }
   //pulls array of user routes from server
